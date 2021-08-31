@@ -3,18 +3,18 @@
 
     <mat-form-field class="form">
         <mat-label>Número</mat-label>
-        <input matInput type="text" name="numero" placeholder="151434001" autocomplete="off" required  [(ngModel)]="processo.numero" > 
+        <input matInput type="text" name="numero" placeholder="151434001" autocomplete="off" required  [(ngModel)]="processo.numero" style="min-width: 150px;" > 
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label>Ano</mat-label>
-        <input matInput type="number" name="ano" maxlength="4" placeholder="2021" autocomplete="off" required [(ngModel)]="processo.ano"> 
+        <input matInput type="number" name="ano" maxlength="4" placeholder="2021" autocomplete="off" required [(ngModel)]="processo.ano" style="min-width: 150px;"> 
     </mat-form-field>
 
 
     <mat-form-field appearance="fill" class="form">
         <mat-label>Pessoa</mat-label>
-        <select matNativeControl required name="idPessoa" [(ngModel)]="processo.idPessoa">
+        <select matNativeControl required name="idPessoa" [(ngModel)]="processo.idPessoa" style="min-width: 150px;">
             <option *ngFor="let pessoa of pessoas" value= {{pessoa.id}}>
                 {{pessoa.nome}}
             </option>
