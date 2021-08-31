@@ -1,0 +1,44 @@
+<form autocomplete="off">
+    <h1>Vizualizar Processo</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Data Cadastro</mat-label>
+        <input matInput type="date" name="dataCadastro" disabled class="input-font" [(ngModel)]="processo.dataCadastro"> 
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Id</mat-label>
+        <input matInput type="number" name="id" disabled class="input-font" [(ngModel)]="processo.id"> 
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Número</mat-label>
+        <input matInput type="text" name="numero" disabled class="input-font" [(ngModel)]="processo.numero" > 
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Ano</mat-label>
+        <input matInput type="text" name="ano" disabled class="input-font" [(ngModel)]="processo.ano" > 
+    </mat-form-field>
+
+    <h3>Pessoa Processo</h3>
+
+    <mat-form-field class="form">
+        <mat-label>Pessoa</mat-label>
+        <input matInput type="text" name="pessoa" disabled class="input-font" [(ngModel)]="pessoaProcesso.id+' - '+pessoaProcesso.nome" > 
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>CPF</mat-label>
+        <input matInput type="text" name="cpf" disabled class="input-font" [(ngModel)]="pessoaProcesso.cpf" > 
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Data Nascimento</mat-label>
+        <input matInput type="date" name="dataNascimento" disabled class="input-font" [(ngModel)]="pessoaProcesso.dataNascimento" > 
+    </mat-form-field>
+
+    <div class="buttons">
+        <button mat-raised-button  (click)="irParaConsultaProcessos()" class="mat-elevation-z8">Voltar</button>
+    </div>
+</form>

@@ -1,0 +1,33 @@
+<form autocomplete="off">
+    <h1>Consulta / Alteração Pessoa</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Id</mat-label>
+        <input matInput type="text" name="id" disabled [(ngModel)]="pessoa.id"> 
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Data Nascimento</mat-label>
+        <input matInput type="date" name="dataNascimento" required [(ngModel)]="pessoa.dataNascimento"> 
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" name="nome" placeholder="nome" required [(ngModel)]="pessoa.nome"> 
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>CPF</mat-label>
+        <input matInput type="text" name="cpf" maxlength="11" disabled [(ngModel)]="pessoa.cpf"> 
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Data Cadastro</mat-label>
+        <input matInput type="date" name="dataCadastro" disabled [(ngModel)]="pessoa.dataCadastro"> 
+    </mat-form-field>
+
+    <div class="buttons">
+        <button mat-raised-button (click)="update()" color="primary" class="mat-elevation-z8">Gravar</button>
+        <button mat-raised-button (click)="irParaConsultaPessoas()" class="mat-elevation-z8">Voltar</button>
+    </div>
+</form>

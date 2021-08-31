@@ -1,0 +1,23 @@
+<form autocomplete="off">
+    <h1>Cadastro de Pessoa</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Data Nascimento</mat-label>
+        <input matInput type="date" name="dataNascimento"  autocomplete="off" required [(ngModel)]="pessoa.dataNascimento" required> 
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" name="nome" placeholder="Nome Sobrenome" required autocomplete="off" [(ngModel)]="pessoa.nome"> 
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>CPF</mat-label>
+        <input matInput type="text" name="cpf" maxlength="11" placeholder="CPF Somente números" autocomplete="off" required [(ngModel)]="pessoa.cpf"> 
+    </mat-form-field>
+
+    <div class="buttons">
+        <button mat-raised-button (click)="create()" color="primary" class="mat-elevation-z8">Gravar</button>
+        <button mat-raised-button (click)="irParaConsultaPessoas()" class="mat-elevation-z8">Voltar</button>
+    </div>
+</form>

@@ -1,0 +1,35 @@
+form{
+    text-align: center;
+    width: 70%;
+    margin: 2rem auto 0 auto;
+}
+
+.form{
+    width: 70%;
+    margin: auto;
+    margin: .8rem auto 0 auto;
+}
+
+
+h1{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2.8rem;
+}
+
+.buttons{
+    width: 70%;
+    margin: auto;
+    text-align: end;
+}
+
+.buttons button{
+    margin-right: .5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.input-font{
+    color:black;
+    font-weight: 400;
+}

@@ -1,0 +1,28 @@
+<form autocomplete="off">
+    <h1>Cadastro de Processos</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Número</mat-label>
+        <input matInput type="text" name="numero" placeholder="151434001" autocomplete="off" required [(ngModel)]="processo.numero" > 
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Ano</mat-label>
+        <input matInput type="number" name="ano" maxlength="4" placeholder="2021" autocomplete="off" required [(ngModel)]="processo.ano"> 
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill" class="form">
+        <mat-label>Pessoa</mat-label>
+        <select matNativeControl required name="idPessoa" [(ngModel)]="processo.idPessoa">
+            <option *ngFor="let pessoa of pessoas" value= {{pessoa.id}}>
+                {{pessoa.nome}}
+            </option>
+        </select>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button mat-raised-button (click)="create()" color="primary" class="mat-elevation-z8">Gravar</button>
+        <button mat-raised-button (click)="irParaConsultaProcessos()" class="mat-elevation-z8">Voltar</button>
+    </div>
+</form>
