@@ -44,3 +44,7 @@
 .th-alterar{
     text-align: center;
 }
+
+td{
+    min-width: 150px;
+}
